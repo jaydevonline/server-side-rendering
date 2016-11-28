@@ -1,9 +1,11 @@
 import React from 'react';
 import Transmit from 'react-transmit';
-import Hello from 'Hello';
+import Hello from 'js/Hello';
+
+
 
 Transmit.render(
   Hello,
-  {name: 'World'},
+  {name: 'World', person:'jaydev'},
   document.getElementById('app')
 );

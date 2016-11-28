@@ -9,6 +9,7 @@
   "author": "Dmitri Pisarev",
   "license": "ISC",
   "dependencies": {
+    "above-the-fold-only-server-render": "^1.0.3",
     "express": "^4.13.4",
     "isomorphic-fetch": "^2.2.1",
     "path": "^0.12.7",

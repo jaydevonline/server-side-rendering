@@ -1,11 +1,20 @@
 import React from 'react';
 import Transmit from 'react-transmit';
 import fetch from 'isomorphic-fetch';
-import s from 'Hello.scss';
+import AboveTheFoldOnlyServerRender from 'above-the-fold-only-server-render';
+import styles from 'css/Hello.scss';
+import People from 'js/People';
+
 
 const Hello = React.createClass({
   render: function() {
-    return <div className={s.root}>Hello {this.props.name}. Async hello {this.props.hello}</div>;
+    return <div>
+              <p className={styles.largeText}> Hello {this.props.name} </p> 
+              <p className={styles.largeText}>Async hello {this.props.hello} </p>
+              <AboveTheFoldOnlyServerRender skip={true}>
+                <People person={this.props.person} /> 
+              </AboveTheFoldOnlyServerRender>
+          </div>;
   }
 });
 

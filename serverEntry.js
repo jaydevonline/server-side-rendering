@@ -1,10 +1,10 @@
 import fs from 'fs';
 import React from 'react';
 import Transmit from 'react-transmit';
-import Hello from './Hello.js';
+import Hello from './js/Hello.js';
 
 function handleRender(req, res) {
-    Transmit.renderToString(Hello, {name: 'World'})
+    Transmit.renderToString(Hello, {name: 'World', person:'Gajera'})
         .then(({reactString, reactData}) => {
             fs.readFile('./index.html', 'utf8', function (err, file) {
                 if (err) {
